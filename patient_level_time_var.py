@@ -1,3 +1,4 @@
+# Convert the raw data into better forms
 class patient(object):
 
 	def __init__(self,filename):
