@@ -35,20 +35,20 @@ for f in listdir("./set-a"):
 
 # Randomly pick 7 survival patients and 1 dead patient
 dead_list = []
-live_list = []
+survival_list = []
 
 for n in range(1,(len(RecordIDs))):
 
 	if(outcomes[n].rstrip().split(',')[5] == '1'):
 		dead_list.append(n)
 	else:
-		live_list.append(n)
+		survival_list.append(n)
 
 random_list =[]
 random_list.append(random.sample(dead_list,1)[0])
 
 for j in range(0,7):
-	random_list.append(random.sample(live_list,7)[j])  
+	random_list.append(random.sample(survival_list,7)[j])  
 
 # Plot the line graph showing time and temperature of 7 random survival patients and 1 dead one
 output_file("color_scatter.html", title="patient_Temp_time.py example")
